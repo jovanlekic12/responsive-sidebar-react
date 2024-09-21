@@ -14,13 +14,13 @@ function SideBar() {
             <li key={id}>
               <a href={url}>
                 {icon}
-                {text.toUpperCase()}
+                {text}
               </a>
             </li>
           );
         })}
       </ul>
-      <ul className="soicals__list">
+      <ul className="socials__list">
         {social.map((link) => {
           const { id, url, icon } = link;
           return (
