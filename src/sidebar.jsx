@@ -1,12 +1,18 @@
 import React from "react";
 import { links, social } from "./data.jsx";
-import { FaHome } from "react-icons/fa";
+import { ImCross } from "react-icons/im";
 import logo from "./logo.svg";
+import { useState } from "react";
 
 function SideBar() {
+  const [isOpened, setIsOpened] = useState(false);
+
   return (
-    <aside className="sidebar">
-      <img src={logo} alt="404" />
+    <aside className={isOpened ? "sidebar" : "sidebar closed"}>
+      <div className="logo__div">
+        <img src={logo} alt="404" />
+        <ImCross />
+      </div>
       <ul className="links__list">
         {links.map((link) => {
           const { id, url, text, icon } = link;

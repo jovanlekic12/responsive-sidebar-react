@@ -6,7 +6,7 @@ import "./App.css";
 function App() {
   return (
     <main>
-      <button className="sidebar__btn">
+      <button onClick={() => setIsOpened(!isOpened)} className="sidebar__btn">
         <FaBars />
       </button>
       <SideBar />

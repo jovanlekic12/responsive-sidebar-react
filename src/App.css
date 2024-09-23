@@ -24,20 +24,43 @@
 
 .sidebar {
   max-width: 400px;
-  padding: 2rem;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  z-index: 99;
+  background-color: #fff;
+}
+
+.closed {
+  transform: translate(-100%, 0);
 }
 
 .sidebar img {
-  width: 100%;
+  width: 80%;
+}
+
+.logo__div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.logo__div svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  color: #49a6e9;
 }
 
 .links__list {
   margin-top: 2rem;
   list-style: none;
-  padding: 0;
+  padding: 0 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin-bottom: 37rem;
 }
 
 .links__list a {
@@ -51,7 +74,7 @@
 
 .socials__list {
   list-style: none;
-  padding: 0;
+  padding: 0 2rem;
   display: flex;
   justify-content: center;
   gap: 0.8rem;
