@@ -4,14 +4,12 @@ import { ImCross } from "react-icons/im";
 import logo from "./logo.svg";
 import { useState } from "react";
 
-function SideBar() {
-  const [isOpened, setIsOpened] = useState(false);
-
+function SideBar({ isOpened, setIsOpened }) {
   return (
     <aside className={isOpened ? "sidebar" : "sidebar closed"}>
       <div className="logo__div">
         <img src={logo} alt="404" />
-        <ImCross />
+        <ImCross onClick={() => setIsOpened(!isOpened)} />
       </div>
       <ul className="links__list">
         {links.map((link) => {

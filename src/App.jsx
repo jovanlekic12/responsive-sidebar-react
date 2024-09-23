@@ -4,12 +4,13 @@ import SideBar from "./sidebar";
 import "./App.css";
 
 function App() {
+  const [isOpened, setIsOpened] = useState(false);
   return (
     <main>
       <button onClick={() => setIsOpened(!isOpened)} className="sidebar__btn">
         <FaBars />
       </button>
-      <SideBar />
+      <SideBar isOpened={isOpened} setIsOpened={setIsOpened} />
     </main>
   );
 }
