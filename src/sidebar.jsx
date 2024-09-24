@@ -9,7 +9,7 @@ function SideBar({ isOpened, setIsOpened }) {
     <aside className={isOpened ? "sidebar" : "sidebar closed"}>
       <div className="logo__div">
         <img src={logo} alt="404" />
-        <ImCross onClick={() => setIsOpened(!isOpened)} />
+        <ImCross onClick={() => setIsOpened((prev) => !prev)} />
       </div>
       <ul className="links__list">
         {links.map((link) => {
